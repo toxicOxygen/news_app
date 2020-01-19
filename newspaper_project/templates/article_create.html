@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Create Article{% endblock title %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" value="create" class="btn btn-primary"/>
+</form>
+{% endblock content %}
